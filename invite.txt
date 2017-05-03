@@ -1,0 +1,65 @@
+
+Dear All,
+
+Good news, everyone! "Learning to Program" has enough interest to go ahead. I'm
+really delighted, I hope this will be a lot of fun. This email covers logistics
+and preparation. Any questions, drop me a line.
+
+
+Future announcements
+====================
+
+Most importantly: from now on, all announcements will be on the #code-club
+channel on Slack. Sign up here:
+https://alan-turing-institute.slack.com/messages/C52N7GYRJ
+
+
+FIRST GET-TOGETHER
+==================
+
+Friday, May 5th, 12-1pm. (In ... Augusta? Room 1.2, anyway).
+
+
+Logistics 
+=========
+
+There will be two hours a week, both in Room 1.2 (Augusta?):
+
+  - "Code Club": Friday lunchtimes, noon-1pm (first one is May 5th).
+
+  - A formal class: Tuesday mornings, 11am (first one is May 9th)
+
+The formal class is for me to introduce and explain new topics.
+
+Code Club is for practicing (which is really important!). I'll suggest some
+things to have a go at (probably from the book) and be around to help with
+questions on anything. (I will also bring my lunch.)
+
+The first get-together will actually be a Code Club. Have a go at installing
+Racket before then (see below) but if you run into trouble we can try to fix it
+on that Friday.
+
+
+Preparation
+===========
+
+1. Please download and install Racket from http://racket-lang.org (the download
+   button is in the top right).
+
+2. Make sure you can run DrRacket. It should look something like the picture
+   here: http://docs.racket-lang.org/drracket/interface-essentials.html
+
+3. Make sure you have found the online book. It's here:
+   http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
+
+   Feel free (but not obliged!) to read the Preface.
+
+
+That's all! See you Friday 5th.
+
+
+James
+
+
+
+

@@ -21,6 +21,9 @@
   following formula: C = (5/9)&times;(F&minus;32). What is 37.5 degrees Celsius in
   Fahrenheit?
 
+* What is the difference between `12` and `(12)`? What happens if you ask Racket
+  to evaluate each? Can you explain the error message?
+
 ## Recap of 01
 
 We saw two ways to make _expressions_. Either:
@@ -39,6 +42,7 @@ number". (This is not the whole truth!)
 2. Strings (`"Hello, World."`)
 3. Booleans (`#true`, `#false`)
 4. Images
+
 
 ## Other kinds of function
 

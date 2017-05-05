@@ -18,17 +18,21 @@
   (Try to do this all in one expression.)
 
 * Temperatures in Celsius, C, can be converted to Fahrenheit, F, with the
-  following formula: C = (5/9) x (F - 32). What is 37.5 degrees Celsius in
+  following formula: C = (5/9)&times;(F&minus;32). What is 37.5 degrees Celsius in
   Fahrenheit?
 
 ## Recap of 01
 
 We saw two ways to make _expressions_. Either:
 
-    - A _value_; or
-    - `(` `op` `arg`~1~ `arg`~2~ ... `')
+  - A _value_; or
+  
+  - `(` `op` `arg`~1~ `arg`~2~ ... `')
 
 And so far, "a value" has meant "a number". (This is not the whole truth!)
+
+
+## Other kinds of values and other functions
 
 
 ```scheme

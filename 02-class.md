@@ -25,34 +25,43 @@
 
 We saw two ways to make _expressions_. Either:
 
-  - A _value_; or
+  1. A _value_; or
   
-  - `(` `op` `arg`<sub>1</sub> `arg`<sub>2</sub> ... `)`
+  2. `(` `op` `arg`<sub>1</sub> `arg`<sub>2</sub> ... `)`
 
-And so far, "a value" has meant "a number". (This is not the whole truth!)
+where the `arg`s are also expressions. And so far, "a value" has meant "a
+number". (This is not the whole truth!)
 
 
-## Other kinds of values and other functions
+## Other kinds of values
 
+1. Numbers (`42`)
+2. Strings (`"Hello, World."`)
+3. Booleans (`#true`, `#false`)
+4. Images
+
+## Other kinds of function
+
+Try the following:
 
 ```scheme
 "Hello, World."
 ```
 	
 ```scheme
-(string-length "Hello, World")
+(string-length "Hello, World.")
 ```
 	
 ```scheme
-(string-append "Hello" "World")
+(string-append "Hello" "World.")
 ```
 
 ```scheme
-(string-append "Hello" ", " "World)
+(string-append "Hello" ", " "World" ".")
 ```
 
 ```scheme
-(string-length "Hello, World")
+(string-length "Hello, World.")
 ```
 
 ```scheme

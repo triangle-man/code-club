@@ -1,3 +1,7 @@
+# Code Club 
+
+## One
+
 > The Analytical Engine has no pretensions whatever to originate anything. It
 > can do whatever we know how to order it to perform.
 > — *Ada Lovelace (d. 1852)*
@@ -9,9 +13,13 @@
 
 * Overview
 
-  - Alternating lessons and "code club"
-  - First few weeks follow the Prologue, mostly show-and-tell
-  
+    - Alternating lessons and "code club"
+    - First few weeks follow the Prologue, mostly show-and-tell
+
+* What is programming?
+
+* Slogan: Everything means something 
+
 * Project ideas
 
 

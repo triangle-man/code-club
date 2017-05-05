@@ -27,7 +27,7 @@ We saw two ways to make _expressions_. Either:
 
   - A _value_; or
   
-  - `(` `op` `arg`~1~ `arg`~2~ ... `')
+  - `(` `op` `arg`<sub>1</sub> `arg`<sub>2</sub> ... `)`
 
 And so far, "a value" has meant "a number". (This is not the whole truth!)
 

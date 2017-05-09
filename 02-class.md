@@ -12,7 +12,7 @@ will start over and talk about a more systematic way of designing programs.)
 
 * Multiply 48&thinsp;384 by 2&thinsp;091.
 
-* Divide a billion by a thousand. 
+* Divide a billion iby a thousand. 
 
 * Try evaluating `1/2` (just as written, not `(/ 1 2)`). What about
   `2/3`? What about `2 / 3`? What's going on?
@@ -62,7 +62,7 @@ number". (This is not the whole truth!)
 
 ## Other kinds of function
 
-Try the following:
+Try the following. Before each, try to say what you expect to happen.
 
 ```scheme
 "Hello, World."
@@ -78,6 +78,10 @@ Try the following:
 
 ```scheme
 (string-append "Hello" ", " "World" ".")
+```
+
+```scheme
+(string-append "Hello" 42)
 ```
 
 ```scheme

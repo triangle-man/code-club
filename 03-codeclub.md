@@ -16,7 +16,7 @@ expressions. An expression is either:
   2. `(` _function_ _expression_<sub>1</sub> _expression_<sub>2</sub>  ... `)`
 
 The value of the first kind of expression is itself. To evaluate the second kind
-of epression, Racket first evaluates all the sub-expressions, then applies the
+of ezpression, Racket first evaluates all the sub-expressions, then applies the
 function to the values produced. 
 
 We also now know several kinds of value. A _value_ is either: 
@@ -25,9 +25,16 @@ We also now know several kinds of value. A _value_ is either:
   2. A string (`"Hello, World."`);
   3. A "Boolean" (either `#true` or `#false`); or
   4. An image
+  
+And we know several built-in functions, for example:
+
+  1. Arithmetic functions like `+`, `-`, `log` and so on;
+  2. String functions like `string-append`, `string->number` and so on;
+  3. Boolean functions like `and`, `or`, and `not`; and
+  4. Image functions like `circle`.
 
 
-## Études
+## Exercises
 
 1. Convert 5 feet to inches. (There are 12 inches in a foot.)
 
@@ -64,8 +71,19 @@ We also now know several kinds of value. A _value_ is either:
    (Note that both of those will give an error in our current language.)
     
     
+## More about images
+
+Try the following:
+
+```scheme
+"Hello, World."
+```
 
 
+
+
+
+## Definitions
 
 
 

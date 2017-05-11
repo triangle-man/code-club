@@ -62,7 +62,6 @@ And we know several built-in functions, for example:
 
    Now try the next few. (Either in the interactions window or the definitions window.)
 
-7. 
 ```scheme
 (circle 20 "outline" "orange")
 ```
@@ -75,40 +74,70 @@ And we know several built-in functions, for example:
 (triangle 20 "solid" "darkgreen")
 ```
 
-6. In the current language we are using, Beginning Student, the function `+` (as
-   in, for example, `(+ 2 3)`) must take at least two arguments. In the "full"
-   language it can take any number of arguments, including one or none.
-    
-   If you wanted to give a meaning to `+` on one argument, what would it be?
-   That is, what do you think `(+ 2)` *should* be?
-    
-   What do you think the sum of no numbers should be? (That is, what would you
-   want from `(+)`?)
-        
-   (Note that both of those will give an error in our current language.)
     
     
 ## More about images
 
-Try the following:
+Try the following in the definitions window:
 
 ```scheme
-"Hello, World."
+(require 2htdp/image)
+
+(above
+ (triangle 30 "solid" "darkgreen")
+ (rectangle 10 20 "solid" "brown"))
 ```
 
+(From now on, I'll leave out the `require`.)
 
-
-
+```scheme
+(beside
+ (above
+  (triangle 30 "solid" "darkgreen")
+  (rectangle 10 20 "solid" "brown"))
+ (above
+  (triangle 30 "solid" "darkgreen")
+  (rectangle 10 20 "solid" "brown")))
+```
 
 ## Definitions
 
+What if I want lots of trees?
+
+What if I want to make a tree of a given height?
+
+    
+## Excerises
+
+Here is the definition of a function to convert inches to centimetres:
+```scheme
+(define (inches->cm x)
+    (* x 2.54))
+```
+
+
+1. Fill in the missing part of this definition to define a function of one
+   argument, `feet->inches`, that converts feet into inches:
+
+```scheme
+(define (feet->inch x) 
+    <missing>)
+```
+
+Check that your function works. Eg, 
+```
+(feet->inch 1)
+```
+should produce the number 12.
+
+2. Define a function `feet->cm` using the functions `feet->inch` and `inch->cm`. 
+
+3. Define a constant called `CM/INCH` whose value is 2.54 and replace 2.54 in
+   the defintion of `inch->cm` with this constant.
 
 
 
-
-
-
-
+    
 ## Other exercises 
 
 (4) The earth is 24000 miles around the equator. How many meters is that? (There

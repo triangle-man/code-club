@@ -8,16 +8,16 @@ will start over and talk about a more systematic way of designing programs.)
 
 ## Recap of 02
 
-_Expressions_ are little questions for Racket to answer. We saw two ways to make
-expressions. An expression is either:
+_Expressions_ are like little questions for Racket to answer. We have seen two
+ways to make expressions. An expression is either:
 
   1. A _value_; or
   
   2. `(` _function_ _expression_<sub>1</sub> _expression_<sub>2</sub>  ... `)`
 
 The value of the first kind of expression is itself. To evaluate the second kind
-of ezpression, Racket first evaluates all the sub-expressions, then applies the
-function to the values produced. 
+of expression, Racket first evaluates all the sub-expressions, then applies the
+function to the values produced.
 
 We also now know several kinds of value. A _value_ is either: 
 
@@ -36,29 +36,46 @@ And we know several built-in functions, for example:
 
 ## Exercises
 
-1. Convert 5 feet to inches. (There are 12 inches in a foot.)
+1. How many centimetres are there in a foot? (There are 2.54 centimetres in an
+   inch, and 12 inches in a foot.) 
 
-2. Convert 5 feet 7 inches to inches.
-
-3. Convert 5 feet 7 inches to centimetres. (There are 2.54 centimetres in an
-   inch.) Can you do this in one expression, using your expressions from (1) and
-   (2)?
-
-4. How many letters are there in "Supercalifragilisticexpialidocious" ? (Hint:
+2. How many letters are there in "Supercalifragilisticexpialidocious"? (Hint:
    remember there is a function `string-length`)
     
-5. Look in the documentation for `string-ith`. What is the 10th letter of
+3. Look in the documentation for `string-ith`. What is the 10th letter of
    "antidisestablishmentarianism"?
     
    The documentation is under "*How to Design Programs* Languages", under "1
    Beginning Student".
 
-6. Look in the documentation for `string<?`. What is `(string<? "hello" "goodbye")`?
+4. Look in the documentation for `string<?`. What is `(string<? "hello" "goodbye")`?
 
-7. What is `(and (or #true #false #false) (or #false #false))`? (Try to guess
+5. What is `(and (or #true #false #false) (or #false #false))`? (Try to guess
    before entering it into Racket.) 
 
-8. In the current language we are using, Beginning Student, the function `+` (as
+6. Put the following in the definitions window, and click Run (or select Run
+   from one of the menus, or click ctrl-R [or command-R on a Mac]).
+
+```scheme
+(require 2htdp/image)
+```
+
+   Now try the next few. (Either in the interactions window or the definitions window.)
+
+7. 
+```scheme
+(circle 20 "outline" "orange")
+```
+
+```scheme
+(rectangle 10 20 "solid" "brown")
+```
+
+```scheme
+(triangle 20 "solid" "darkgreen")
+```
+
+6. In the current language we are using, Beginning Student, the function `+` (as
    in, for example, `(+ 2 3)`) must take at least two arguments. In the "full"
    language it can take any number of arguments, including one or none.
     

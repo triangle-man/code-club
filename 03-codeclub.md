@@ -29,38 +29,39 @@ We also now know several kinds of value. A _value_ is either:
 
 ## Études
 
-(1) Convert 5 feet to inches. (There are 12 inches in a foot.)
+ (1) Convert 5 feet to inches. (There are 12 inches in a foot.)
 
-(2) Convert 5 feet 7 inches to inches.
+ (2) Convert 5 feet 7 inches to inches.
 
-(3) Convert 5 feet 7 inches to centimetres. (There are 2.54 centimetres in an
-    inch.)
+ (3) Convert 5 feet 7 inches to centimetres. (There are 2.54 centimetres in an
+    inch.) Can you do this in one expression, using your expressions from (1)
+    and (2)?
 
-(6) How many letters are there in "Supercalifragilisticexpialidocious" ? (Hint:
-    remember there is a function called "`string-length`")
+ (4) How many letters are there in "Supercalifragilisticexpialidocious" ? (Hint:
+    remember there is a function `string-length`)
     
-(7) Look in the documentation for `string-ith`. What is the 10th letter of
+ (5) Look in the documentation for `string-ith`. What is the 10th letter of
     "antidisestablishmentarianism"?
     
     The documentation is under "*How to Design Programs* Languages", under "1
     Beginning Student".
 
-(8) Look in the documentation for `string<?`. What is `(string<? "hello" "goodbye")`?
+(6) Look in the documentation for `string<?`. What is `(string<? "hello" "goodbye")`?
 
-(9) What is `(and (or #true #false #false) (or #false #false))`? (Try to guess
+(7) What is `(and (or #true #false #false) (or #false #false))`? (Try to guess
     before entering it into Racket.) 
 
-(10) In the current language we are using, Beginning Student, the function `+`
-     (as in, for example, `(+ 2 3)`) must take at least two arguments. In the
-     "full" language it can take any number of arguments, including one or none.
+(8) In the current language we are using, Beginning Student, the function `+`
+    (as in, for example, `(+ 2 3)`) must take at least two arguments. In the
+    "full" language it can take any number of arguments, including one or none.
     
-     If you wanted to give a meaning to `+` on one argument, what would it be?
-     That is, what do you think `(+ 2)` *should* be?
+    If you wanted to give a meaning to `+` on one argument, what would it be?
+    That is, what do you think `(+ 2)` *should* be?
     
-     What do you think the sum of no numbers should be? (That is, what would you
-     want from `(+)`?)
+    What do you think the sum of no numbers should be? (That is, what would you
+    want from `(+)`?)
         
-     (Note that both of those will give an error in our current language.)
+    (Note that both of those will give an error in our current language.)
     
     
 

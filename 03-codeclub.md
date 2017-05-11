@@ -120,20 +120,20 @@ Here is the definition of a function to convert inches to centimetres:
    argument, `feet->inches`, that converts feet into inches:
 
 ```scheme
-(define (feet->inch x) 
+(define (feet->inches x) 
     <missing>)
 ```
 
 Check that your function works. Eg, 
 ```
-(feet->inch 1)
+(feet->inches 1)
 ```
 should produce the number 12.
 
-2. Define a function `feet->cm` using the functions `feet->inch` and `inch->cm`. 
+2. Define a function `feet->cm` using the functions `feet->inches` and `inches->cm`. 
 
 3. Define a constant called `CM/INCH` whose value is 2.54 and replace 2.54 in
-   the defintion of `inch->cm` with this constant.
+   the defintion of `inches->cm` with this constant.
 
 
 

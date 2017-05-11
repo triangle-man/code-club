@@ -13,7 +13,7 @@ expressions. An expression is either:
 
   1. A _value_; or
   
-  2. `(` _function_ _expression<sub>1</sub>_ expression<sub>2</sub>_  ... `)`
+  2. `(` _function_ _expression_<sub>1</sub> _expression_<sub>2</sub>_  ... `)`
 
 The value of the first kind of expression is itself. To evaluate the second kind
 of epression, Racket first evaluates all the sub-expressions, then applies the

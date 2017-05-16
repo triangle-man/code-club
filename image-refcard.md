@@ -73,7 +73,7 @@ Shape                                                              Description
 ## Adding shapes to images
 
 There are two variations to some of these: `add-X` adds the shape `X` to an
-image, and grows the images size if necessary, whereas `scene+X` will clip `X`
+image and grows the image size if necessary, whereas `scene+X` will clip `X`
 to the bounding-box of the image.
 
 -------------------------------------------------------------------------------------------------------------
@@ -104,8 +104,8 @@ Command                                                            Description
 
 ## Putting one image on top of another
 
-_x-place_ is one of "left", "right", "middle", "center", or "pinhole". _y-place_
-is one of "top", "bottom", "middle", "center", "baseline", or "pinhole".
+_x-place_ is one of `"left"`, `"right"`, `"middle"`, `"center"`, or `"pinhole"`. _y-place_
+is one of `"top"`, `"bottom"`, `"middle"`, `"center"`, `"baseline"`, or `"pinhole"`.
 
 Note: All of these have an equivalent `underlay` variation, which puts the first image on the bottom.
 

@@ -33,4 +33,15 @@ problems. Given a task, there is the whole "how do I even get started" problem?
 
 When should I introduce testing? Maybe as soon as definitions are introduced?
 
+## 03 (4)
+
+Down to four this week. Not entirely sure how to manage the trade-off between:
+losing people because we're going too fast, and losing people because we're not
+doing interesring things. 
+
+It turned out that digressing into Excel was very helpful -- not only is it
+relevant to many people, but also it helps people understand what Racket is
+doing.
+
+
 

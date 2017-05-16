@@ -43,5 +43,36 @@ It turned out that digressing into Excel was very helpful -- not only is it
 relevant to many people, but also it helps people understand what Racket is
 doing.
 
+## 04
+
+Back up to ~ 10 people this week. Yay!
+
+Started by demonstrating two simple programs: one to draw a
+house-next-to-a-tree, and the other to show a bouncing ball.
+
+My plan was to generate enthusiasm by showing "where this is all going".
+
+Many people immediately decided to play around with the bouncing ball program --
+changing magic numbers, etc, and seeing the effect. There was quite a bit of
+enthusiasm about this. But at some point most people changed the program
+sufficiently to cause a syntax error, from which they were not able to
+recover. I think some people were also quite lost.
+
+At that point, we switched back to exploring 2htdp/image, with the task of
+drawing a tree, and binding the value to a name. That was a good plan, but only
+after people had deleted all the bouncing ball code. 
+
+Ended with definitions of constants. Interestingly, in starting with the
+template:
+
+```scheme
+(define TREE ... )
+```
+many people started to complete it by patterning after `circle` from the image
+library:
+
+```scheme
+(define TREE "solid" "red" ...)
+```
 
 

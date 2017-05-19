@@ -30,12 +30,14 @@
 (define DEFAULT-BALL-WIDTH 10)
 
 ;; Vector Interface
-(define (make-list-vec x y z) (list x y z))
-(define (vec-x v) (car v))
-(define (vec-y v) (cadr v))
-(define (vec-z v) (caddr v))
-(define (add-vectors v1 v2) (map + v1 v2))
-(define (scale-vector v s) (map (lambda (x) (* x s)) v))
+;; Interestingly enough, I think this is actually a full definition of a vector space. 
+(define (make-3d-vec x y z) (vector x y z))
+(define (vec-x v) (vector-ref v 0))
+(define (vec-y v) (vector-ref v 1))
+(define (vec-z v) (vector-ref v 2))
+(define (add-vectors v1 v2) (vector-map + v1 v2))
+(define (scale-vector v s) (vector-map (lambda (x) (* x s)) v))
+(define vec-0 (make-3d-vec 0 0 0))
 
 ;; Ball Interface
 (define-struct Ball (position
@@ -57,9 +59,9 @@
         [rand-Gz0 (- (random 20) 10)]
         [rand-width (random 10 30)]
         [rand-color (random-ref DEFAULT-COLORS)])
-    (make-Ball (make-list-vec rand-X0 rand-Y0 rand-Z0)
-               (make-list-vec rand-Vx0 rand-Vy0 rand-Vz0)
-               (make-list-vec 0 0 DEFAULT-ACCEL) ; try (make-list-vec rand-Gx0 rand-Gy0 rand-Gz0) for weirdness!
+    (make-Ball (make-3d-vec rand-X0 rand-Y0 rand-Z0)
+               (make-3d-vec rand-Vx0 rand-Vy0 rand-Vz0)
+               (make-3d-vec 0 0 DEFAULT-ACCEL) ; try (make-3d-vec rand-Gx0 rand-Gy0 rand-Gz0) for weirdness!
                DEFAULT-BOUNCE-FACTOR
                rand-width
                rand-color)))
@@ -102,21 +104,21 @@
    ball
    vec-x
    SCENE-WIDTH
-   (lambda (vel) (make-list-vec (- (* (Ball-bounce-factor ball) (vec-x vel))) (vec-y vel) (vec-z vel)))))
+   (lambda (vel) (make-3d-vec (- (* (Ball-bounce-factor ball) (vec-x vel))) (vec-y vel) (vec-z vel)))))
 
 (define (bounce-ball-y-axis ball)
   (bounce-ball-on-axis
    ball
    vec-y
    SCENE-HEIGHT
-   (lambda (vel) (make-list-vec (vec-x vel) (- (* (Ball-bounce-factor ball) (vec-y vel))) (vec-z vel)))))
+   (lambda (vel) (make-3d-vec (vec-x vel) (- (* (Ball-bounce-factor ball) (vec-y vel))) (vec-z vel)))))
 
 (define (bounce-ball-z-axis ball)
   (bounce-ball-on-axis
    ball
    vec-z
    SCENE-DEPTH
-   (lambda (vel) (make-list-vec (vec-x vel) (vec-y vel) (- (* (Ball-bounce-factor ball) (vec-z vel)))))))
+   (lambda (vel) (make-3d-vec (vec-x vel) (vec-y vel) (- (* (Ball-bounce-factor ball) (vec-z vel)))))))
 
 ;; World Interface
 ;; World struct used rather than just a ball list, just in case I want to add more stuff

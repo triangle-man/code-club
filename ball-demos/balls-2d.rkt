@@ -13,11 +13,12 @@
 (define DEFAULT-BOUNCE-FACTOR 1)
 
 ;; Vector Interface
-(define (make-list-vec x y) (list x y))
-(define (vec-x v) (car v))
-(define (vec-y v) (cadr v))
-(define (add-vectors v1 v2) (map + v1 v2))
-(define (scale-vector v s) (map (lambda (x) (* x s)) v))
+(define (make-2d-vec x y) (vector x y))
+(define (vec-x v) (vector-ref v 0))
+(define (vec-y v) (vector-ref v 1))
+(define (add-vectors v1 v2) (vector-map + v1 v2))
+(define (scale-vector v s) (vector-map (lambda (x) (* x s)) v))
+(define vec-0 (make-2d-vc 0 0))
 
 ;; Ball Interface
 (define-struct Ball (position
@@ -36,9 +37,9 @@
         [rand-gx (- (random 20) 10)]
         [rand-gy (- (random 20) 10)]
         [rand-color (random-ref DEFAULT-COLORS)])
-    (make-Ball (make-list-vec rand-X0 rand-Y0)
-               (make-list-vec rand-Vx0 rand-Vy0)
-               (make-list-vec rand-gx rand-gy) ; try (make-list-vec 0 DEFAULT-ACCEL) for physics!
+    (make-Ball (make-2d-vec rand-X0 rand-Y0)
+               (make-2d-vec rand-Vx0 rand-Vy0)
+               (make-2d-vec rand-gx rand-gy) ; try (make-2d-vec 0 DEFAULT-ACCEL) for physics!
                DEFAULT-BOUNCE-FACTOR ; try (+ 0.79 (/ 1 width)) for ball bounciness based on size!
                rand-width
                rand-color)))
@@ -65,7 +66,7 @@
 ;; Physics of bouncing is modelled pretty terribly here.
 ;; The bounce only decreases the magnitude of the "flipped" component of velocity.
 (define (bounce-ball-x-axis ball)
-  (define (flip velocity) (make-list-vec (- (* (Ball-bounce-factor ball) (vec-x velocity))) (vec-y velocity)))
+  (define (flip velocity) (make-2d-vec (- (* (Ball-bounce-factor ball) (vec-x velocity))) (vec-y velocity)))
   (let ([x (vec-x (Ball-position ball))]
         [vx (vec-x (Ball-velocity ball))]
         [bw (Ball-width ball)])
@@ -80,7 +81,7 @@
         ball)))
 
 (define (bounce-ball-y-axis ball)
-  (define (flip velocity) (make-list-vec (vec-x velocity) (- (* (Ball-bounce-factor ball) (vec-y velocity)))))
+  (define (flip velocity) (make-2d-vec (vec-x velocity) (- (* (Ball-bounce-factor ball) (vec-y velocity)))))
   (let ([y (vec-y (Ball-position ball))]
         [vy (vec-y (Ball-velocity ball))]
         [bw (Ball-width ball)])

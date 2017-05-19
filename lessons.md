@@ -75,4 +75,19 @@ library:
 (define TREE "solid" "red" ...)
 ```
 
+# 05 Functions!
+
+We started with the comment-based function statement from the beginning. It was
+very helpful even for live-coding, because it explains what is going to happen
+before the code.
+
+Some challenges that arose:
+    - understanding that the formal argument to a function is just a placeholder (and
+      not, for example, a global variable)
+    - tendency to drop back to non-syntactically valid forms when calling
+      user-defined functions
+      
+Plan: lots of examples and practice!
+
+
 

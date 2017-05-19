@@ -3,14 +3,14 @@
 (require 2htdp/universe)
 (require racket/random)
 
-(define timescale 0.05)
+(define timescale 0.2)
 (define SCENE-WIDTH 800)
 (define SCENE-HEIGHT 600)
 (define MT (empty-scene SCENE-WIDTH SCENE-HEIGHT))
-(define DEFAULT-ACCEL -150)
+(define DEFAULT-ACCEL -200)
 (define DEFAULT-COLORS '("red" "orange" "yellow" "green" "blue" "purple" "pink"))
-(define DEFAULT-BALL-NUMBER 150)
-(define DEFAULT-BOUNCE-FACTOR 1)
+(define DEFAULT-BALL-NUMBER 100)
+(define DEFAULT-BOUNCE-FACTOR 0.8)
 
 ;; Vector Interface
 (define (make-2d-vec x y) (vector x y))
@@ -18,7 +18,7 @@
 (define (vec-y v) (vector-ref v 1))
 (define (add-vectors v1 v2) (vector-map + v1 v2))
 (define (scale-vector v s) (vector-map (lambda (x) (* x s)) v))
-(define vec-0 (make-2d-vc 0 0))
+(define vec-0 (make-2d-vec 0 0))
 
 ;; Ball Interface
 (define-struct Ball (position

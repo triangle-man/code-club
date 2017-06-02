@@ -44,13 +44,12 @@ relevant to many people, but also it helps people understand what Racket is
 doing.
 
 ## 04
-
+    
 Back up to ~ 10 people this week. Yay!
 
 Started by demonstrating two simple programs: one to draw a
-house-next-to-a-tree, and the other to show a bouncing ball.
-
-My plan was to generate enthusiasm by showing "where this is all going".
+house-next-to-a-tree, and the other to show a bouncing ball. My plan was to
+generate enthusiasm by showing "where this is all going".
 
 Many people immediately decided to play around with the bouncing ball program --
 changing magic numbers, etc, and seeing the effect. There was quite a bit of

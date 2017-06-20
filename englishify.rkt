@@ -7,23 +7,25 @@
 (define (number-0-to-99->english N)
   (if (< N 20)
       (number-0-to-19->english N)
-      (number-20-to-99->english N)))d
+      (number-20-to-99->english N)))
 
 (define (number-20-to-99->english N)
-  ;; append the following two strings:
-  ;; FIRST
-  ;; N divided by 10 gives the "tens" (2, 3, ...)
-  ;; take this number and make "twenty", "thirty", ...
-  ;; then SECOND
-  ;; take remainder when N is divided by 10
-  ;; use number-0-to-19->english on that
-  
-  )
+  ;; append the "tens" in words to the "units" in words
+  (string-append (tens->english           (quotient N 10))
+                 (number-0-to-19->english (remainder N 10))))
 
+;; Number -> String
+;; argument must be a whole number between 2 and 9
 ;; Convert 2, 3, 4, ... 9 to "twenty", ... "ninety"
 (define (tens->english N)
-  STUFF
-  )
+  (cond [(= N 2) "twenty"]
+        [(= N 3) "thirty"]
+        [(= N 4) "forty"]
+        [(= N 5) "fifty"]
+        [(= N 6) "sixty"]
+        [(= N 7) "seventy"]
+        [(= N 8) "eighty"]
+        [(= N 9) "ninety"]))
   
 (define (number-0-to-19->english N)
   (cond [(zero? N) "zero"]

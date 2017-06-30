@@ -60,6 +60,7 @@
         [(< N 20) (teens N)]
         [(< N 100) (number-20-to-99->english N)]
         [(< N 1000) (number-100-to-999->english N)]
+        [(< N 1000000) (number-1000-to-999999->english N)]
         [else "Number too big to write."]))
 
 ;; Number -> String
@@ -74,15 +75,21 @@
 (define (number-100-to-999->english N)
   (string-append
    (units (quotient N 100))
-   " hundred"
+   " "
+   HUNDRED
    (possible-tens-suffix (remainder N 100))))
+
+;; Number -> String
+;; (number-1000-to-999999->english 4321) =>
+;;;   "four thousand, three hundred and twenty-one"
+(define (number-1000-to-999999->english N)
+  STUFF GOES HERE)
 
 ;; Number -> String
 (define (possible-tens-suffix N)
   (if (zero? N)
       ""
       (string-append " and " (number->english N))))
-  
   
 ;; Number->String
 ;; (possible-suffix 0) => ""

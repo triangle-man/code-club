@@ -83,7 +83,17 @@
 ;; (number-1000-to-999999->english 4321) =>
 ;;;   "four thousand, three hundred and twenty-one"
 (define (number-1000-to-999999->english N)
-  STUFF GOES HERE)
+  (string-append
+   (number->english (quotient N 1000))
+   " " THOUSAND
+   (possible-hundreds-suffix (remainder N 1000))))
+
+
+;; Number -> String
+(define (possible-hundreds-suffix N)
+  (if (zero? N)
+      ""
+      (string-append ", " (number->english N))))
 
 ;; Number -> String
 (define (possible-tens-suffix N)

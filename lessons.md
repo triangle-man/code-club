@@ -91,6 +91,16 @@ Some challenges that arose:
 Plan: lots of examples and practice!
 
 
+# 06 Conditionals and repetition
+
+We used `animate` from `2htdp/universe` to explore doing something over and
+over.
+
+Introduced `if`, and used it to define a version of `max`. That was reasonably
+clear.
+
+Some people with experience of other languages used a different syntax
+occasionally, but it seemed to be straightforward to return to Racket syntax.
 
 # 06 More functions
 
